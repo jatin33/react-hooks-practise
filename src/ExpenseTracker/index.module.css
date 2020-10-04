@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1em;
+    width: 100%;
+}
+
+.centerFlex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}

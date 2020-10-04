@@ -1,0 +1,24 @@
+.income {
+    color: green;
+    padding-top: 1em;
+}
+
+.expense {
+    padding-top: 1em;
+    color: red;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    padding: 1em;
+    margin-top: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.container > div {
+    padding-top: 1em;
+}
