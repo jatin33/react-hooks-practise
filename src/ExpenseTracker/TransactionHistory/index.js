@@ -10,6 +10,7 @@ function TransactionHistory({ cards }) {
     return (
         <div className={style.list}>
             <h3>History</h3>
+            <hr width={300} />
             {cards.map((card) => 
                 <TransactionCard
                     key={card.id}
