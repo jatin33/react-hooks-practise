@@ -1,15 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import CountDownTimer from './CountDownTimer';
+import ExpenseTracker from './ExpenseTracker';
+import { ExportContextProvider } from './ExpenseTracker/contexts/ExpenseContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <CountDownTimer time={10} />
-      </header>
+    <div>
+        {/* <CountDownTimer time={10} /> */}
+        <ExportContextProvider>
+          <ExpenseTracker />
+        </ExportContextProvider>
     </div>
   );
 }
