@@ -13,7 +13,7 @@ function CountDownTimer(props) {
     let audioTag = useRef(null);
 
     function updater() {
-        setTimeLeft(prevTimeLeft => prevTimeLeft - 1);
+            setTimeLeft(prevTimeLeft => prevTimeLeft - 1);
     }
 
     useEffect(() => {
@@ -26,6 +26,14 @@ function CountDownTimer(props) {
             clearInterval(interval.current)
         }
     }, [timeLeft]);
+
+    // used when component unmounts and here timer gets removed
+    // so no state updates happen on unmounted component
+    useEffect(() => {
+        return function cleanup() {
+            clearInterval(interval.current);
+        }
+    }, []);
 
     return (
         <>
