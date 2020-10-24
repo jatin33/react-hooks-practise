@@ -9,6 +9,7 @@ import {
   NavLink
 } from "react-router-dom";
 import CountDownTimer from './CountDownTimer';
+import { Random } from './Random';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
             <li>
               <NavLink to="/expensetracker" activeClassName={style.selected}>Expense Tracker</NavLink>
             </li>
+            <li>
+              <NavLink to="/random" activeClassName={style.selected}>Random stuff</NavLink>
+            </li>
           </ul>
         </nav>
         <Switch>
@@ -32,6 +36,9 @@ function App() {
             <ExportContextProvider>
               <ExpenseTracker />
             </ExportContextProvider>
+          </Route>
+          <Route strict path="/random">
+            <Random />
           </Route>
         </Switch>
       </Router>
